@@ -1,7 +1,7 @@
 [project]
-name = "package"
-description = "Give a brief description"
-authors = [{ name = "Noah Everett", email = "noahe@metrized.com" }]
+name = "fiftyone-llm"
+description = "An LLM-powered assistant for FiftyOne workflows"
+authors = [{ name = "Afif Varikkodan", email = "afifv@metrized.com" }]
 requires-python = ">=3.7"
 dynamic = ["version", "readme"]
 dependencies = ["click"]
@@ -10,7 +10,7 @@ dependencies = ["click"]
 dev = ["pip-tools", "black", "pytest", "pre-commit", "ruff"] # Developer tools
 
 [tool.setuptools.dynamic]
-version = { attr = "package.__version__" }
+version = { attr = "fiftyone-llm.__version__" }
 readme = { file = ["README.md"] }
 
 

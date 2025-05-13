@@ -7,6 +7,7 @@ import fiftyone.brain as fob
 import fiftyone.zoo as foz
 import os
 import cv2
+from smolagents import OpenAIServerModel
 
 # Constants
 ORIGINAL_SIZE = (5760, 2840)
@@ -26,11 +27,9 @@ def parse_yolo_annotations(filename):
             boxes.append((class_id, x_center, y_center, w, h))
     return boxes
 
-model = HfApiModel(
-    "Qwen/Qwen2.5-72B-Instruct",
-    provider="together", # Choose a specific inference provider
-    max_tokens=4096,
-    temperature=0.1
+model = OpenAIServerModel(
+    model_id="gpt-4o",  # or "gpt-3.5-turbo", "gpt-4", etc.
+    api_base="https://api.openai.com/v1",  # optional, defaults to OpenAI
 )
 
 
