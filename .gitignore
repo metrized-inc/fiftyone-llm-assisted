@@ -1,0 +1,23 @@
+# Python Artifacts
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+venv/
+
+# Test Caches
+.pytest_cache/
+
+# Build Artifacts
+*.egg-info/
+build/
+data/
+
+# Editor settings
+.vscode
+
+# Files
+*.png
+*.bmp
+*.jpg
+*.ppm
